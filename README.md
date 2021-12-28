@@ -2,5 +2,6 @@
 
 > 잘못된 정보를 발견하셨다면 편하게 이슈 혹은 PR 을 통해 알려주세요
 
+* [HTML5 Canvas](./HTML5_Canvas/README.md)
 * [Android](./Android/README.md)
 * [JS](./JS/README.md)
