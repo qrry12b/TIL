@@ -1,6 +1,7 @@
 # Material .opacity : Float
 
-불투명도를 주고 싶을때 사용 할 수 있는 속성입니다.   
+opacity는 불투명도를 주고 싶을때 사용 할 수 있는 속성입니다.   
+
 단, 불투명도를 사용할때는 반드시 transparent 를 true로 지정해야 하며 
 기본값은 false 를 가집니다.   
 
