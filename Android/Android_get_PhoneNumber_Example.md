@@ -32,3 +32,6 @@ private String getPhoneNumber() throws SecurityException {
     return null;
 }
 ```
+
+### REF
+[android-versions-11](https://developer.android.com/about/versions/11/privacy/permissions#phone-numbers)

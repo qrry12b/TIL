@@ -32,6 +32,6 @@ ctx.drawImage(offscreen, 90, 90);
 
 단, 간단한 작업에서 불필요한 더블버퍼링은 성능 하락이 발생 할 수 있습니다.
 
-REF
-* https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
-* https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
+### REF
+* [MDN Web Docs #1](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
+* [MDN Web Docs #2](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage)

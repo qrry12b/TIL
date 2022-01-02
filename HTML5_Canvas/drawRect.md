@@ -35,6 +35,6 @@ ctx.quadraticCurveTo(x, y, x + topLeft, y);
 ctx.closePath();
 ```
 
-REF
-* https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
-* https://stackoverflow.com/questions/1255512/how-to-draw-a-rounded-rectangle-using-html-canvas
+### REF
+* [MDN Web Docs](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+* [Stack Overflow-q-1255512](https://stackoverflow.com/questions/1255512/how-to-draw-a-rounded-rectangle-using-html-canvas)

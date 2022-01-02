@@ -20,6 +20,5 @@ const materialOps = {
 const canvasMaterial = new THREE.MeshBasicMaterial( materialOps );
 ```
 
-
-REF
-* https://threejs.org/docs/#api/en/textures/CanvasTexture
+### REF
+* [docs](https://threejs.org/docs/#api/en/textures/CanvasTexture)

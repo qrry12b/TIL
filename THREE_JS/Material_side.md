@@ -7,5 +7,5 @@ THREE.js 는 면의 양 방향 모두를 항상 렌더링하는것이 아닌 Mat
 
 만약 앞면만 보이게 하고 싶다면 THREE.FrontSide, 뒷면만 보이게 하고 싶다면 THREE.BackSide, 양면에서 모두 보여야 할때는 THREE.DoubleSide 를 side 로 설정하면 됩니다.
 
-REF
-* https://threejs.org/docs/#api/en/materials/Material
+### REF
+* [docs](https://threejs.org/docs/#api/en/materials/Material)
