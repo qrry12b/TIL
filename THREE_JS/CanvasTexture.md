@@ -4,6 +4,8 @@ CanvasTexture는 Texture를 상속받아 구현된 클래스로 생성자가 호
 
 또한 CanvasTexture 가 아닌 Texture 을 사용해도 needsUpdate 만 true로 설정하면 동일한 결과를 얻을 수 있습니다.
 
+캔버스에 그려지는 데이터가 지속적으로 수정된다면 texture.map.needsUpdate 도 **갱신시 마다** true로 변경해야 합니다.
+
 ```
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d', { alpha: false });
