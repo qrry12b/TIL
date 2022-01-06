@@ -119,7 +119,7 @@ fileFilter는 파일 저장여부를 필터링 할 수 있으며 실제 파일�
 
 만약 fileFilter의 callback에서 두번째 인자에 false를 반환할 경우 해당 파일은 req.file, req.files에서 제외됩니다.
 
-또한 첫번째 인자에 null 이 아닌 Error를 생성해 반환하며 multer는 에러를 express에 위임합니다.   
+또한 첫번째 인자에 null 이 아닌 Error를 생성해 반환하면 multer는 에러를 express에 위임합니다.   
 (HTTP 5XX 반환, 오류 페이지를 보여줄 때)
 
 단, express가 아닌 multer 로 부터 에러를 캐치하고 싶다면 직접 미들웨어 함수를 호출 할 수 있습니다.
@@ -142,9 +142,10 @@ app.post('/upload', /*upload.array('file'),*/ (req,res)=>{
         if(err) {
             console.log('catch err');
             res.send({ result : false });
+        } else {
+            console.log(req.file, req.files);
+            res.send({ result : true });
         }
-        console.log(req.file, req.files);
-        res.send({ result : true });
     });    
 });
 ```
@@ -183,6 +184,8 @@ app.post('/upload', /*upload.array('file'),*/ (req,res)=>{
 업로드 페이지는 다음 파트에서 작성하도록 하며 404 예외가 발생하지 않도록 빈 페이지만 생성합니다.   
 
 웹페이지가 작성되지 않은 상태에서 업로드 요청에 대한 동작은 Postman 등의 툴로 확인할 수 있습니다.
+
+[Express.js 이미지 업로드 파트 2](./imgUploadPart2.md)
 
 ### REF
 * [multer github doc-ko](https://github.com/expressjs/multer/blob/master/doc/README-ko.md)
