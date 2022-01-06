@@ -1,5 +1,7 @@
 # Express.js 이미지 업로드 파트 1
 
+파트 1 에서는 express, multer 모듈을 사용한 이미지 파일 업로드를 작성합니다.
+
 **install package**
 ```
 npm i dotenv express multer
