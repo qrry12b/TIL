@@ -38,7 +38,7 @@
                 ext = name.substring(extIdx);
             }
 
-            if(ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg' && ext !== '.git') {
+            if(ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg' && ext !== '.gif') {
                 alert('이미지 파일을 선택해주세요 (png, jpg, jpeg, git)');
                 return;
             }
@@ -98,7 +98,7 @@ XMLHttpRequest 의 프로퍼티 onreadystatechange는 상태가 변경될때마�
 다음 파트에서는 다중 파일 업로드를 다룹니다.
 
 ### REF
-
+* [MDN Web Docs - Input/file](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input/file)
 * [MDN Web Docs - XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
 * [MDN Web Docs - Using_FormData_Objects](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 * [TCP SCHOOL - xml_dom_xmlHttpRequest](https://www.tcpschool.com/xml/xml_dom_xmlHttpRequest)

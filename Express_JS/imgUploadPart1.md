@@ -38,7 +38,7 @@ const upload = multer({
     storage: storage,
     fileFilter : (req,file, callback) => {
         let ext = path.extname(file.originalname).toLowerCase();
-        if(ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.git') {
+        if(ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.gif') {
             return callback(null, true);
         }else{
             return callback(null, false);
@@ -131,7 +131,7 @@ fileFilter는 파일 저장여부를 필터링 할 수 있으며 실제 파일�
 //multer
 fileFilter : (req,file, callback) => {
     let ext = path.extname(file.originalname).toLowerCase();
-    if(ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.git') {
+    if(ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.gif') {
         return callback(null, true);
     }else{
         return callback(new Error('a'), false);
