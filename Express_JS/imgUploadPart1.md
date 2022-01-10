@@ -16,7 +16,7 @@ multer는 Multipart/form-data 를 다루기 위한 미들웨어이며 해당 타
 require('dotenv').config();
 var env = process.env;
 
-const express = require('express'), app = express()
+const express = require('express'), app = express();
 const http  = require('http'), path = require('path'), fs = require('fs');
 
 const uploadPath = path.join(__dirname, 'uploads');
