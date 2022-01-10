@@ -82,7 +82,7 @@ thumSize: 16801
 다음 파트에서는 업로드할 이미지 미리보기를 다룹니다.
 
 ### REF
-* (Github sharp)[https://github.com/lovell/sharp]
-* (Sharp)[https://sharp.pixelplumbing.com]
+* [Github sharp](https://github.com/lovell/sharp)
+* [Sharp](https://sharp.pixelplumbing.com)
 * [MDN Web Docs - Spread_syntax](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 * [MDN Web Docs - async_function](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/async_function)
