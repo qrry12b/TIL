@@ -18,6 +18,8 @@ reader.onload = function(event) {
 reader.readAsDataURL(file);
 ```
 
+다음 파트에서는 드래그로 이미지 순서 변경하기를 다룹니다.
+
 ### REF
 * [MDN Web Docs - FileList](https://developer.mozilla.org/en-US/docs/Web/API/FileList)
 * [MDN Web Docs - File](https://developer.mozilla.org/en-US/docs/Web/API/File)
