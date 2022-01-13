@@ -1,7 +1,3 @@
-![structure](https://threejs.org/manual/resources/images/threejs-structure.svg)
-IMAGE REF : [https://threejs.org/manual/#en/fundamentals](https://threejs.org/manual/#en/fundamentals)   
-
-- - - - -
 
 ```
 const width = window.innerWidth;
@@ -90,3 +86,5 @@ AxesHelper와 Mesh(PlaneGeometry, MeshBasicMaterial)를 추가한 다음
 z 축으로 2만큼 위에서 볼 경우 위 이미지처럼 출력됩니다.
 
 AxesHelper는 중심(0,0,0)에 3축을 표시해 중심으로부터 위치, 각도를 확인할 수 있으며 PlaneGeometry는 단순한 평면 도형을 그릴 수 있습니다.   
+
+REF : [https://threejs.org/manual/#en/fundamentals](https://threejs.org/manual/#en/fundamentals)   
