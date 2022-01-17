@@ -163,3 +163,12 @@
 다음 파트에서는 드래그 앤 드롭으로 이미지 업로드를 다룹니다.
 
 ### REF
+* [MDN Web Docs - HTML_Drag_and_Drop_API](https://developer.mozilla.org/ko/docs/Web/API/HTML_Drag_and_Drop_API)
+* [MDN Web Docs - DataTransfer](https://developer.mozilla.org/ko/docs/Web/API/DataTransfer)
+* [MDN Web Docs - FileList](https://developer.mozilla.org/en-US/docs/Web/API/FileList)
+* [MDN Web Docs - File](https://developer.mozilla.org/en-US/docs/Web/API/File)
+* [MDN Web Docs - FileReader](https://developer.mozilla.org/ko/docs/Web/API/FileReader)
+* [MDN Web Docs - XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+* [MDN Web Docs - Using_FormData_Objects](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+* [MDN Web Docs - getBoundingClientRect](https://developer.mozilla.org/ko/docs/Web/API/Element/getBoundingClientRect)
+* [TCP SCHOOL - xml_dom_xmlHttpRequest](https://www.tcpschool.com/xml/xml_dom_xmlHttpRequest)
