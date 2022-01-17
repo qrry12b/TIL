@@ -105,7 +105,6 @@
         });
 
         function getFiles( files /*FileList*/ ) {
-            console.log('getFiles',files);
             let file;
             let otherCnt = 0;
             if(files && files.length) {
