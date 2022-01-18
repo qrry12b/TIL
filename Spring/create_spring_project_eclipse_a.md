@@ -2,10 +2,10 @@
 
 ### Marketplace에서 Spring Tools 3 (Standalone Edition) or Spring Tools 4 (aka Spring Tool Suite 4) 를 설치하면 더 쉽게 구성 가능합니다.
 
-이클립스에서 New > Dynamic Web Project 를 클릭합니다.
-Target runtime : tomcat 8.n.n
-Dynamic web module version : 3.1
-Configuration : Default Configuration for apache-tomcat-8.n.n
+이클립스에서 New > Dynamic Web Project 를 클릭합니다.   
+Target runtime : tomcat 8.n.n   
+Dynamic web module version : 3.1   
+Configuration : Default Configuration for apache-tomcat-8.n.n   
 
 Next > Next 클릭후 Generate web.xml deployment descriptor를 선택하고 Finish를 클릭합니다.
 
@@ -53,4 +53,142 @@ Tomcat Server에 프로젝트를 추가 후 실행합니다.
 
 - - - - -
 
+pom.xml에 properties를 추가합니다
+```
+<properties>
+    <spring.version>4.2.6.RELEASE</spring.version>
+</properties>
+```
+
+pom.xml에 dependencyManagement를 추가합니다
+```
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-framework-bom</artifactId>
+            <version>${spring.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+
+pom.xml에 dependencies를 추가합니다.
+```
+<dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aspects</artifactId>
+    </dependency>
+</dependencies>
+```
+- - - - -
+
+src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 web.xml 에 에러 페이지로 매핑합니다.   
+
+```
+<error-page>
+    <error-code>404</error-code>
+    <location>/HTTP404.jsp</location>
+</error-page>
+
+<error-page>
+    <error-code>500</error-code>
+    <location>/HTTP500.jsp</location>
+</error-page>
+```
+- - - - -
+
+//TODO//   
+
+```
+<context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/spring/root-context.xml</param-value>
+</context-param>
+```
+
+//TODO//   
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+</beans>
+```
+
+//TODO//   
+
+```
+<listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+```
+
+//TODO//   
+
+```
+<servlet>
+    <servlet-name>appServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>appServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
+```
+
+//TODO//   
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<annotation-driven />
+	<context:component-scan base-package="com.qrry12b.spring" />
+
+	<resources mapping="/resources/**" location="/resources/" />
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+</beans:beans>
+```
+
+- - - - -
+
 //TODO// 여기서 부터 계속 작성됩니다.
+
+- - - - -
