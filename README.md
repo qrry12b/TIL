@@ -8,10 +8,10 @@
 * [EJS](./EJS/README.md)
 * [Javascript](./JavaScript/README.md)
 * [Express.js](./Express_JS/README.md)
+* [Spring](./Spring/README.md)
 <!-- * [React.js](./React_JS/README.md) -->
 <!-- * [CSS3](./CSS3/README.md) -->
 <!-- * [D3.js](./D3_JS/README.md) -->
 <!-- * [Node.js](./Node_JS/README.md) -->
-<!-- * [Spring](./Spring/README.md) -->
 <!-- * [Electron.js](./ELECTRON_JS/README.md) -->
 <!-- * [ECharts.js](./ECharts_JS/README.md) -->
