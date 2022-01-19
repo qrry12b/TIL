@@ -104,6 +104,7 @@ pom.xml에 dependencies를 추가합니다.
 
 src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 web.xml 에 에러 페이지로 매핑합니다.   
 
+*** src/main/webapp/WEB-INF/web.xml ***
 ```
 <error-page>
     <error-code>404</error-code>
@@ -119,6 +120,7 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 
 //TODO//   
 
+*** src/main/webapp/WEB-INF/web.xml ***
 ```
 <context-param>
     <param-name>contextConfigLocation</param-name>
@@ -128,6 +130,7 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 
 //TODO//   
 
+*** src/main/webapp/WEB-INF/spring/root-context.xml ***
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -138,6 +141,7 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 
 //TODO//   
 
+*** src/main/webapp/WEB-INF/web.xml ***
 ```
 <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -146,6 +150,7 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 
 //TODO//   
 
+*** src/main/webapp/WEB-INF/web.xml ***
 ```
 <servlet>
     <servlet-name>appServlet</servlet-name>
@@ -165,6 +170,7 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 
 //TODO//   
 
+*** src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml ***
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
@@ -179,6 +185,7 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 	<context:component-scan base-package="com.qrry12b.spring" />
 
 	<resources mapping="/resources/**" location="/resources/" />
+
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
@@ -189,6 +196,38 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 
 - - - - -
 
-//TODO// 여기서 부터 계속 작성됩니다.
+*** src/main/java/com/qrry12b/spring/HomeController.java ***
+```
+package com.qrry12b.spring;
+
+import import org.springframework.stereotype.Controller;
+import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+public class HomeController {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String main() {
+        return "main";
+    }
+}
+```
+
+- - - - -
+
+*** src/main/webapp/WEB-INF/views/main.jsp ***
+```
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Main Page</title>
+</head>
+<body>
+	Main Page
+</body>
+</html>
+```
 
 - - - - -
