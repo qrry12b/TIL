@@ -42,3 +42,28 @@ Putty or Open SSH Client 설치 및 실행
 > https://www.raspberrypi.org/documentation/remote-access/ssh/windows.md
 
 - - - - -
+
+7\. <u>sudo passwd root</u> 를 입력후 루트계정에 부여할 비밀번호를 입력 후 Enter, 재입력 후 Enter   
+(passwd :password updated successfully) 를 확인하면 완료   
+(Raspbery Pi Imager 가 아닌 다른툴로 직접 구성시 pi 비밀번호도 변경)   
+
+> sudo raspi-config   
+> 8 Update   
+> 5 Localisation Options > Locale > ko_KR.EUC-KR , ko_KR.UTF-8 추가   
+> 5 Locatisation Options > Timezone > Asia > Seoul   
+> Finish > reboot now [Yes]
+
+- - - - -
+
+8\. 패키지 인덱스 정보 업데이트 및 패키지 업그레이드   
+> sudo apt-get update -y   
+> sudo apt-get upgrade -y   
+> sudo reboot
+
+- - - - -
+
+라즈베리파이OS 에서 한글이 깨질경우   
+> sudo apt-get install fonts-unfonts-core
+
+위 방법으로 해결되지 않는 경우   
+> sudo apt-get fonts-nanum fonts-nanum-extra
