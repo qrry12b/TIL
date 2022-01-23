@@ -11,7 +11,7 @@
 * [Javascript](./JavaScript/README.md)
 * [Docker](./Docker/README.md)
 * [Git](./Git/README.md)
-* [Raspberry PI](./RaspberryPI/README.md)
+* [Raspberry PI](./RaspberryPi/README.md)
 <!-- * [Node.js](./Node_JS/README.md) -->
 <!-- * [React.js](./React_JS/README.md) -->
 <!-- * [CSS3](./CSS3/README.md) -->

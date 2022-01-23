@@ -6,3 +6,4 @@
 
 ### REF
 * [docs](https://ejs.co/#docs)
+* [docs-syntax](https://github.com/mde/ejs/blob/master/docs/syntax.md)
