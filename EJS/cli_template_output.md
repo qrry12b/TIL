@@ -71,3 +71,7 @@ out.html을 확인해보면 ejs 템플릿 문법으로 작성된 부분이 데�
 </body>
 </html>
 ```
+
+### REF
+* [ejs cli](https://github.com/mde/ejs/blob/main/README.md#cli)
+* [ejs syntax](https://github.com/mde/ejs/blob/main/docs/syntax.md)
