@@ -120,16 +120,6 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 
 //TODO//   
 
-*** src/main/webapp/WEB-INF/web.xml ***
-```
-<context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>/WEB-INF/spring/root-context.xml</param-value>
-</context-param>
-```
-
-//TODO//   
-
 *** src/main/webapp/WEB-INF/spring/root-context.xml ***
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -139,16 +129,25 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 </beans>
 ```
 
-//TODO//   
+ContextLoaderListener는 RootApplicationContext를 생성하는 클래스로 context-param의 contextConfigLocation 설정 파일을 읽어 RootApplicationContext를 생성합니다.   
+(XML파일이 다수일 경우 줄바꿈으로 다음줄에 추가하면 됩니다)
 
 *** src/main/webapp/WEB-INF/web.xml ***
 ```
+<context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/spring/root-context.xml</param-value>
+</context-param>
+
 <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 </listener>
 ```
 
-//TODO//   
+RootApplicationContext는 ApplicationContext(Servlet단위) 에서 접근이 가능하지만 그 반대 (루트에서 Servlet단위) 는 접근할 수 없습니다.
+
+servlet 내부의 
+DispatcherServlet는 contextConfigLocation 설정 파일을 읽어 WebApplicationContext를 생성합니다.
 
 *** src/main/webapp/WEB-INF/web.xml ***
 ```
@@ -168,7 +167,25 @@ src/main/webapp/HTTP404.jsp, src/main/webapp/HTTP500.jsp 파일을 생성하고 
 </servlet-mapping>
 ```
 
-//TODO//   
+XML 에 다음과 같이 작성해 어노테이션을 활성화하고 컴포넌트 스캔할 패키지를 지정합니다.
+
+> \<annotation-driven />
+> \<context:component-scan base-package="com.qrry12b.spring" />
+
+- - -
+DispatcherServlet이 컨트롤러에서 반환된 View이름을 토대로 ViewResolver를 통해 view 화면을 찾으며   
+
+prefix는 반환된 뷰 이름 앞에 오는 문자열 (이 예시에서는 /WEB-INF/views/), suffix는 뷰 이름 뒤에 붙는 문자열 (이 예시에서는 .jsp) 입니다.   
+
+즉, index를 반환했다면 /WEB-INF/views/index.jsp를 찾습니다.
+
+> \<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+> \<beans:property name="prefix" value="/WEB-INF/views/" />
+> \<beans:property name="suffix" value=".jsp" />
+> \</beans:bean>
+
+특정 URL로 들어오면 정적 리소스를 반환하도록 매핑합니다. 
+> \<resources mapping="/resources/**" location="/resources/" />
 
 *** src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml ***
 ```
