@@ -18,6 +18,7 @@
     <div>
         <input type="button" value="Load" id="load">
         <input type="button" value="Save" id="save">
+        <input type="button" value="Upload" id="upload">
         <input type="button" value="Rect" id="rect">
         <input type="button" value="Circle" id="circle">
         <input type="button" value="Line" id="line">
@@ -177,16 +178,17 @@
         }
 
         let canvas = null;
+
         let load = null; 
         let save = null;
+        let upload = null;
         let rect = null;
         let circle = null;
         let line = null;
 
         let items = [];
-        let flag = 'none';
         let flagParam = ['none'];
-        let updateflag = false;
+    
         
         function update() {
             canvas.whiteClear();
@@ -236,8 +238,6 @@
                     flagParam[2] = e;
                     items.push([flagParam[0], (flagParam[1] || {}).x || 0, (flagParam[1] || {}).y || 0, (flagParam[2] || {}).x || 0, (flagParam[2] || {}).y || 0,'#000000', 1]);
                     flagParam = ['none'];
-                    flag = 'none';
-                    updateflag = true;
                     update();
                 }
             })
@@ -259,30 +259,61 @@
 
             load = gId('load');
             save = gId('save');
+            upload = gId('upload');
             rect = gId('rect');
             circle = gId('circle');
             line = gId('line');
 
             line.addEventListener('click',(e)=>{
-                flag = 'line';
-                flagParam = [flag];
+                flagParam = ['line'];
                 canvas.cursor('crosshair');
             });
 
             rect.addEventListener('click',(e)=>{
-                flag = 'rect';
-                flagParam = [flag];
+                flagParam = ['rect'];
                 canvas.cursor('crosshair');
             });
 
             circle.addEventListener('click',(e)=>{
-                flag = 'circle';
-                flagParam = [flag];
+                flagParam = ['circle'];
                 canvas.cursor('crosshair');
             });
 
+            upload.addEventListener('click',(e)=>{
+                flagParam = ['none'];
+                canvas.cursor('default');
+
+                canvas.toBlob((blob)=>{
+                    let url  = URL.createObjectURL(blob);
+                    let formData = new FormData();
+                    var xmlHttp = new XMLHttpRequest();
+
+                    let d = new Date();
+                    let fileName = d.getFullYear() +'_'+ (d.getMonth()+1) +'_'+ d.getDate() +'_'+ d.getHours()+'_'+d.getMinutes()+'_'+d.getSeconds()+'_'+(Math.floor(100 + Math.random()*100)) + '.png';
+
+                    formData.append('file', blob, fileName);
+ 
+                    xmlHttp.onreadystatechange = function() {
+                        if(this.readyState == XMLHttpRequest.DONE) {
+                            if(this.status == 200 ) {
+                                let res = this.response;
+                                if(res !== void 0 && res !== null && res.result) {
+                                    alert('파일 업로드에 성공했습니다');
+                                    return;
+                                }    
+                            }
+                            alert('파일 업로드에 실패했습니다 code:'+this.status);
+                        }
+                    };
+
+                    xmlHttp.open("POST", "/upload");
+                    xmlHttp.responseType='json';
+                    xmlHttp.send(formData);
+            }, 'image/png', null);
+            });
+
             save.addEventListener('click',(e)=>{
-                flag = 'none';
+                flagParam = ['none'];
                 canvas.cursor('default');
 
                 let d = new Date();
@@ -291,7 +322,7 @@
             });
 
             load.addEventListener('click',(e)=>{
-                flag = 'none';
+                flagParam = ['none'];
                 canvas.cursor('default');
 
                 let input = document.createElement('input');
@@ -334,18 +365,13 @@
 ```
 
 ### REF
-* [MDN Web Docs - HTML_Drag_and_Drop_API](https://developer.mozilla.org/ko/docs/Web/API/HTML_Drag_and_Drop_API)
-* [MDN Web Docs - DataTransfer](https://developer.mozilla.org/ko/docs/Web/API/DataTransfer)
-* [MDN Web Docs - FileList](https://developer.mozilla.org/en-US/docs/Web/API/FileList)
-* [MDN Web Docs - File](https://developer.mozilla.org/en-US/docs/Web/API/File)
-* [MDN Web Docs - FileReader](https://developer.mozilla.org/ko/docs/Web/API/FileReader)
-* [MDN Web Docs - Canvas_API](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API)
-* [MDN Web Docs - HTMLCanvasElement toDataURL](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL)
-* [MDN Web Docs - atob](https://developer.mozilla.org/en-US/docs/Web/API/atob)
-* [MDN Web Docs - Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 * [MDN Web Docs - Blob](https://developer.mozilla.org/ko/docs/Web/API/Blob)
-* [MDN Web Docs - a#attr-download](https://developer.mozilla.org/ko/docs/Web/HTML/Element/a#attr-download)
 * [MDN Web Docs - XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+* [MDN Web Docs - a#attr-download](https://developer.mozilla.org/ko/docs/Web/HTML/Element/a#attr-download)
 * [MDN Web Docs - Using_FormData_Objects](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 * [MDN Web Docs - getBoundingClientRect](https://developer.mozilla.org/ko/docs/Web/API/Element/getBoundingClientRect)
 * [TCP SCHOOL - xml_dom_xmlHttpRequest](https://www.tcpschool.com/xml/xml_dom_xmlHttpRequest)
+* [MDN Web Docs - Canvas_API](https://developer.mozilla.org/ko/docs/Web/API/Canvas_API)
+* [MDN Web Docs - HTMLCanvasElement toDataURL](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL)
+* [MDN Web Docs - FileList](https://developer.mozilla.org/en-US/docs/Web/API/FileList)
+* [MDN Web Docs - File](https://developer.mozilla.org/en-US/docs/Web/API/File)
