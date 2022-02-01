@@ -169,8 +169,8 @@ DispatcherServlet는 contextConfigLocation 설정 파일을 읽어 WebApplicatio
 
 XML 에 다음과 같이 작성해 어노테이션을 활성화하고 컴포넌트 스캔할 패키지를 지정합니다.
 
-> \<annotation-driven />
-> \<context:component-scan base-package="com.qrry12b.spring" />
+> \<annotation-driven />   
+> \<context:component-scan base-package="com.qrry12b.spring" />   
 
 - - -
 DispatcherServlet이 컨트롤러에서 반환된 View이름을 토대로 ViewResolver를 통해 view 화면을 찾으며   
@@ -179,13 +179,13 @@ prefix는 반환된 뷰 이름 앞에 오는 문자열 (이 예시에서는 /WEB
 
 즉, index를 반환했다면 /WEB-INF/views/index.jsp를 찾습니다.
 
-> \<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-> \<beans:property name="prefix" value="/WEB-INF/views/" />
-> \<beans:property name="suffix" value=".jsp" />
+> \<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">   
+> \<beans:property name="prefix" value="/WEB-INF/views/" />   
+> \<beans:property name="suffix" value=".jsp" />   
 > \</beans:bean>
 
-특정 URL로 들어오면 정적 리소스를 반환하도록 매핑합니다. 
-> \<resources mapping="/resources/**" location="/resources/" />
+특정 URL로 들어오면 정적 리소스를 반환하도록 매핑합니다.   
+> \<resources mapping="/resources/**" location="/resources/" />   
 
 *** src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml ***
 ```
@@ -245,6 +245,14 @@ public class HomeController {
 	Main Page
 </body>
 </html>
+```
+
+Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!가 로그에 표시되는 경우 properties에 추가합니다
+```
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+</properties>
 ```
 
 - - - - -
