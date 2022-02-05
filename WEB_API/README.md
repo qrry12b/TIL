@@ -1,6 +1,5 @@
 # WEB API
 
-* [Canvas API](./HTML5_Canvas/README.md)
 * [마이크를 통해 음성 녹음 후 wav파일로 저장하기](./recording-audio.md)
 <!-- * [위치정보 얻기](./#) -->
 <!-- * [클립보드](./#) -->

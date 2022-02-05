@@ -1,3 +1,0 @@
-# Canvas drawText
-
-//TODO//
