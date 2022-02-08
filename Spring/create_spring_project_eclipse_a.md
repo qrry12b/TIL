@@ -187,6 +187,30 @@ prefix는 반환된 뷰 이름 앞에 오는 문자열 (이 예시에서는 /WEB
 특정 URL로 들어오면 정적 리소스를 반환하도록 매핑합니다.   
 > \<resources mapping="/resources/**" location="/resources/" />   
 
+
+*** src/main/webapp/WEB-INF/web.xml ***
+```
+<filter>
+  <filter-name>encodingFilter</filter-name>
+  <filter-class>
+    org.springframework.web.filter.CharacterEncodingFilter
+  </filter-class>
+  <init-param>
+    <param-name>encoding</param-name>
+    <param-value>UTF-8</param-value>
+  </init-param>
+  <init-param>
+    <param-name>forceEncoding</param-name>
+    <param-value>true</param-value>
+  </init-param>
+</filter>
+<filter-mapping>
+  <filter-name>encodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
+```
+인코딩 필터를 설정하지 않을 경우 한글이 깨질 수 있습니다.
+
 *** src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml ***
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -247,6 +271,8 @@ public class HomeController {
 </html>
 ```
 
+최상단의 **<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>** 누락시 응답받은 데이터의 한글이 깨질 수 있습니다.
+
 Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!가 로그에 표시되는 경우 properties에 추가합니다
 ```
 <properties>
@@ -256,3 +282,14 @@ Using platform encoding (MS949 actually) to copy filtered resources, i.e. build 
 ```
 
 - - - - -
+
+ Get 방식으로 전달된 문자열이 깨질경우 server.xml 에서 Connector 태그에 다음 속성을 추가해야 합니다.
+ ```
+  <Connector ... URIEncoding="UTF-8" >
+ ```
+
+- - - - -
+
+HTML(or JSP) 문서에서 한글이 깨진다면 다음 메타태그를 추가합니다.
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
