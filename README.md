@@ -5,7 +5,7 @@
 * [Canvas API](./HTML5_Canvas/README.md)
 * [WEB API](./WEB_API/README.md)
 * [Android](./Android/README.md)
-* [Spring](./Spring/README.md)
+* [Eclipse/Spring](./Spring/README.md)
 * [EJS](./EJS/README.md)
 * [THREE.js](./THREE_JS/README.md)
 * [Express.js](./Express_JS/README.md)
