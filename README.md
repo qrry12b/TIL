@@ -13,13 +13,13 @@
 * [Docker](./Docker/README.md)
 * [Git](./Git/README.md)
 * [Raspberry PI](./RaspberryPi/README.md)
+* [Typescript](./TypeScript/README.md)
 <!-- * [Node.js](./Node_JS/README.md) -->
 <!-- * [React.js](./React_JS/README.md) -->
 <!-- * [CSS3](./CSS3/README.md) -->
 <!-- * [D3.js](./D3_JS/README.md) -->
 <!-- * [Electron.js](./ELECTRON_JS/README.md) -->
 <!-- * [ECharts.js](./ECharts_JS/README.md) -->
-<!-- * [Typescript](./TypeScript/README.md) -->
 <!-- * [SCSS](./SCSS/README.md) -->
 <!-- PM2 -->
 <!-- Linux -->
