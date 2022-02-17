@@ -14,6 +14,9 @@
 * [Git](./Git/README.md)
 * [Raspberry PI](./RaspberryPi/README.md)
 * [Typescript](./TypeScript/README.md)
+* [Java](./Java/README.md)
+<!-- /DBMS /MariaDB (DDL, DML, DCL, TCL) -->
+<!-- Linux (Debian/Redhat) -->
 <!-- * [Node.js](./Node_JS/README.md) -->
 <!-- * [React.js](./React_JS/README.md) -->
 <!-- * [CSS3](./CSS3/README.md) -->
@@ -22,6 +25,3 @@
 <!-- * [ECharts.js](./ECharts_JS/README.md) -->
 <!-- * [SCSS](./SCSS/README.md) -->
 <!-- PM2 -->
-<!-- Linux -->
-<!-- MariaDB -->
-<!-- Java(SLF4J) -->
