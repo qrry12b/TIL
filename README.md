@@ -15,6 +15,7 @@
 * [Raspberry PI](./RaspberryPi/README.md)
 * [Typescript](./TypeScript/README.md)
 * [Java](./Java/README.md)
+* [CS](./CS/README.md)
 <!-- /DBMS /MariaDB (DDL, DML, DCL, TCL) -->
 <!-- Linux (Debian/Redhat) -->
 <!-- * [Node.js](./Node_JS/README.md) -->
