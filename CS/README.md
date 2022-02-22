@@ -23,3 +23,13 @@
 
 - - - - -
 
+|게이트|기호|
+|:---:|:---:|
+|AND|![](./resource/and_gate.svg)|
+|OR|![](./resource/or_gate.svg)|
+|NOT|![](./resource/not_gate.svg)|
+|NAND|![]()|
+|NOR|![]()|
+|Buffer|![](./resource/buffer_gate.svg)|
+|XOR|![]()|
+|XNOR|![](./resource/xor_gate.svg)|
