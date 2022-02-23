@@ -28,8 +28,8 @@
 |AND|![](./resource/and_gate.svg)|
 |OR|![](./resource/or_gate.svg)|
 |NOT|![](./resource/not_gate.svg)|
-|NAND|![]()|
-|NOR|![]()|
+|NAND|![](./resource/nand_gate.svg)|
+|NOR|![](./resource/nor_gate.svg)|
 |Buffer|![](./resource/buffer_gate.svg)|
-|XOR|![]()|
-|XNOR|![](./resource/xor_gate.svg)|
+|XOR|![](./resource/xor_gate.svg)|
+|XNOR|![](./resource/xnor_gate.svg)|
