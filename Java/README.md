@@ -11,5 +11,5 @@
 * [Swing 텍스트 Drop 처리](./java-swing_drop.md)
 * [Web 이미지 내려받기](./java-web-image-download.md)
 * [비트 연산](./java-bitwise-operator.md)
-* [10진수 문자열을 2진수 문자열로 변환하기 (양수)](./java-bitwise-operator.md)
+* [10진수 문자열을 2진수 문자열로 변환하기 (양수)](./java-decimal-number-binary-number.md)
 <!-- SLF4J - LOG4J -->
