@@ -48,8 +48,6 @@
 
 # Android Full Screen Intent
 
-//TODO//
-
 ### REF
 * [android-training](https://developer.android.com/training/notify-user/time-sensitive?hl=ko)
 
@@ -65,6 +63,16 @@
 
 # Spring mariadb 연동 (mybatis)
 
-//TODO//
+- - - - -
+
+# Linux (Debian/Redhat)
+
+- - - - -
+
+# DBMS /MariaDB (DDL, DML, DCL, TCL)
+
+- - - - -
+
+# PM2
 
 - - - - -
