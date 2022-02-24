@@ -16,3 +16,4 @@
 * [Typescript](./TypeScript/README.md)
 * [Java](./Java/README.md)
 * [CS](./CS/README.md)
+* [CMD](./CMD/README.md)
