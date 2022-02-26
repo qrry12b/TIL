@@ -1,5 +1,7 @@
 # Today I Learned(TIL)
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fqrry12b&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 > 잘못된 정보를 발견하셨다면 편하게 이슈 혹은 PR 을 통해 알려주세요
 
 * [Canvas API](./HTML5_Canvas/README.md)
@@ -18,5 +20,3 @@
 * [CS](./CS/README.md)
 * [CMD](./CMD/README.md)
 * [D3](./D3/README.md)
-
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fqrry12b&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
