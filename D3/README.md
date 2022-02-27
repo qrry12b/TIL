@@ -19,4 +19,6 @@ D3는 데이터 시각화 프레임워크로 잘 알려져 있는 만큼 다양�
 만약 이미 있는 요소를 선택한 Selection과 .enter().append()를 통해 새로운 요소를 만든 선택자를   
 중복된 코드를 작성하거나 SelectQuery를 다시 할 필요 없이 .merge() 메소드를 통해 기존 요소와 새로 만든 요소를 하나의 Selection으로 합칠 수 있다.
 
-[REF](https://github.com/d3/d3-selection/blob/v3.0.0/README.md)
+### REF
+* [docs](https://github.com/d3/d3/wiki)
+* [readme-selection](https://github.com/d3/d3-selection/blob/v3.0.0/README.md)

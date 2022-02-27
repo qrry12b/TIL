@@ -7,13 +7,6 @@
 
 - - - - -
 
-# D3.js
-
-### REF
-* [docs](https://github.com/d3/d3/wiki)
-
-- - - - -
-
 # ECharts.js
 
 ### REF
@@ -53,14 +46,6 @@
 
 - - - - -
 
-### Promise
-
-- - - - -
-
-### RegRxp
-
-- - - - -
-
 # Spring mariadb 연동 (mybatis)
 
 - - - - -
@@ -73,6 +58,9 @@
 
 - - - - -
 
-# PM2
+# PM2(Node.js)
+
+### Promise(JS)
+### RegRxp(JS)
 
 - - - - -
