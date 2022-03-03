@@ -95,6 +95,11 @@ arc(x, y, radius, startAngle, endAngle, anticlockwise)
 arcTo(x1, y1, x2, y2, radius)
 ```
 
+타원형 호 그리기 (stroke 혹은 fill 호출 전까지는 그려지지 않습니다)
+```
+ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle [, counterclockwise]);
+```
+
 ```
 ctx.beginPath();
 ctx.arc(100, 75, 50, 0, 2 * Math.PI);
@@ -102,8 +107,27 @@ ctx.stroke();
 ```
 
 ### REF
-* [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc)
+* [MDN Web Docs-arc](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc)
+* [MDN Web Docs-ellipse](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse)
+- - - - -
 
+# Canvas ContextAttributes
+
+컨텍스트 생성 시 컨텍스트 속성을 요청할 수 있습니다   
+```
+getContextAttributes();
+```
+
+ex)   
+```
+var ctx = canvas.getContext('2d', {alpha:false});
+var isAlpha = ctx.getContextAttributes().alpha;
+if(isAlpha) {
+    ctx.globalAlpha = 0.7;
+}
+```
+
+* [MDN Web Docs-getContextAttributes](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getContextAttributes)
 - - - - -
 
 # Canvas drawText
