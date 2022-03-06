@@ -6,6 +6,7 @@
 * [Android get PhoneNumber Example (안드로이드 전화번호 얻기)](./Android_get_PhoneNumber_Example.md)
 * [Android AUTO REVOKE PERMISSIONS 사용하지 않는 앱의 권한 자동 재설정 제외](./Android_AUTO_REVOKE_PERMISSIONS.md)
 * [Get battery level and state in Android 안드로이드 배터리 레벨 얻기](./Android_Get_Battery_LEVEL.md)
+* [Room을 사용하여 로컬 데이터베이스에 데이터 저장 (RxJava3)](./Android_ROOM_Rxjava3.md)
 <!-- * [](./Android_Full_Screen_Intent.md) -->
 
 ### REF
