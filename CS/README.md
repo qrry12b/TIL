@@ -11,7 +11,7 @@
 - 전가산기(full adder)
   - 이진수의 한자리수와 전의 입력에서 발생한 자리올림(carry)으로 3개의 입력과 2개의 출력을 갖는 회로 입니다.
   - input : A, B, Carry / out : C, Sum
-
+  - ![](./resource/full_adder.svg)
 - - - - -
 
 감산기
