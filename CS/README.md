@@ -6,6 +6,7 @@
 - 반가산기(half adder)
   - 이진수의 한자리수를 연산하고, 자리올림은 자리올림수(carry out) 출력으로 해서 2개의 입력과 2개의 출력을 갖는 회로입니다.
   - input : A, B / out : C, Sum
+  - ![](./resource/half_adder.svg)
 
 - 전가산기(full adder)
   - 이진수의 한자리수와 전의 입력에서 발생한 자리올림(carry)으로 3개의 입력과 2개의 출력을 갖는 회로 입니다.
