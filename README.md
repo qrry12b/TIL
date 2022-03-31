@@ -4,7 +4,6 @@
 
 > 잘못된 정보를 발견하셨다면 편하게 이슈 혹은 PR 을 통해 알려주세요
 
-* [Canvas API](./HTML5_Canvas/README.md)
 * [WEB API](./WEB_API/README.md)
 * [Android](./Android/README.md)
 * [Eclipse/Spring](./Spring/README.md)
@@ -27,3 +26,8 @@
 * [Command(cmd.exe) CLI 인자 전달받기](https://qrry12b.blogspot.com/2022/03/blog-post.html)<br/>`TAG (cmd.exe)`  `TAG (windows)`
 * [Typescript Overloading](https://qrry12b.blogspot.com/2022/03/typescript-overloading.html)<br/>`TAG (Typescript)`
 * [Git](https://qrry12b.blogspot.com/2022/03/git.html)<br/>`TAG (Git)`
+* [Canvas drawImage](https://qrry12b.blogspot.com/2022/03/canvas-drawimage.html)<br/>`TAG (Canvas_API)`
+* [Canvas drawRect](https://qrry12b.blogspot.com/2022/03/canvas-drawrect.html)<br/>`TAG (Canvas_API)`
+* [Canvas drawArc](https://qrry12b.blogspot.com/2022/03/canvas-drawarc.html)<br/>`TAG (Canvas_API)`
+* [Canvas ContextAttributes](https://qrry12b.blogspot.com/2022/03/canvas-contextattributes.html)<br/>`TAG (Canvas_API)`
+* [Canvas drawText](https://qrry12b.blogspot.com/2022/03/canvas-drawtext.html)<br/>`TAG (Canvas_API)`
