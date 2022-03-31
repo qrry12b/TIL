@@ -1,3 +1,0 @@
-# Typescript
-
-* [Overloads](./Overloads.md)
