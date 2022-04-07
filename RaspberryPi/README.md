@@ -1,6 +1,5 @@
 # Raspberry PI
 
-* [Raspberry PI OS 설치하기](./installOS.md)
 * [Raspberry PI MariaDB 설치](./mariadb.md)
 * [Raspberry PI MariaDB 설치(구)](./raspi-mariadb.md)
 * [Raspberry PI Redis 설치](./raspi-redis.md)

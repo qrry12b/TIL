@@ -21,7 +21,7 @@
 * [JS Custom Styled Console Log](https://qrry12b.blogspot.com/2022/03/jscustomstyledconsolelog.html)<br/>`TAG (JS)`
 * [JS Symbol.iterator 정의](https://qrry12b.blogspot.com/2022/03/js-symbol-iterator.html)<br/>`TAG (JS)`
 * [윈도우10 Docker 설치](https://qrry12b.blogspot.com/2022/03/window10-docker-instll.html)<br/>`TAG (Docker)`
-* [Windows 10 STS4 설치하기](https://qrry12b.blogspot.com/2022/03/windows-10-sts4-install.html)<br/>`TAG (Eclipse)`  `TAG(STS4)`  `TAG(Spring)`
+* [Windows 10 STS4 설치하기](https://qrry12b.blogspot.com/2022/03/windows-10-sts4-install.html)<br/>`TAG (Eclipse)`  `TAG (STS4)`  `TAG (Spring)`
 * [D3 (Data-Driven Documents)](https://qrry12b.blogspot.com/2022/03/d3-data-driven-documents.html)<br/>`TAG (D3.js)`
 * [Command(cmd.exe) CLI 인자 전달받기](https://qrry12b.blogspot.com/2022/03/blog-post.html)<br/>`TAG (cmd.exe)`  `TAG (windows)`
 * [Typescript Overloading](https://qrry12b.blogspot.com/2022/03/typescript-overloading.html)<br/>`TAG (Typescript)`
@@ -31,3 +31,6 @@
 * [Canvas drawArc](https://qrry12b.blogspot.com/2022/03/canvas-drawarc.html)<br/>`TAG (Canvas_API)`
 * [Canvas ContextAttributes](https://qrry12b.blogspot.com/2022/03/canvas-contextattributes.html)<br/>`TAG (Canvas_API)`
 * [Canvas drawText](https://qrry12b.blogspot.com/2022/03/canvas-drawtext.html)<br/>`TAG (Canvas_API)`
+* [Raspberry PI OS 설치하기](https://qrry12b.blogspot.com/2022/04/raspberry-pi-os.html)<br/>`TAG (Raspberry_PI)`
+* [Raspberry PI OS 설치하기 (Raspberry Pi Imager v1.7.x)](https://qrry12b.blogspot.com/2022/04/raspberrypi-install.html)<br/>`TAG (Raspberry_PI)`
+* [Raspberry PI 에 Docker 설치하기](https://qrry12b.blogspot.com/2022/04/raspberry-pi-docker.html)<br/>`TAG (Raspberry_PI)`  `TAG (DOCKER)`
