@@ -34,3 +34,4 @@
 * [Raspberry PI OS 설치하기](https://qrry12b.blogspot.com/2022/04/raspberry-pi-os.html)<br/>`TAG (Raspberry_PI)`
 * [Raspberry PI OS 설치하기 (Raspberry Pi Imager v1.7.x)](https://qrry12b.blogspot.com/2022/04/raspberrypi-install.html)<br/>`TAG (Raspberry_PI)`
 * [Raspberry PI 에 Docker 설치하기](https://qrry12b.blogspot.com/2022/04/raspberry-pi-docker.html)<br/>`TAG (Raspberry_PI)`  `TAG (DOCKER)`
+* [Github CLI Auth](https://qrry12b.blogspot.com/2022/04/github-cli-auth.html)<br/>`TAG (Git)`  `TAG (Github_CLI)`
